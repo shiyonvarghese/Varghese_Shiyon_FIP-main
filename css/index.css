@@ -1,0 +1,466 @@
+/* Add a black background color to the top navigation */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+
+background-color: rgb(255, 255, 255);
+
+overflow: hidden;
+
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
+
+padding-top: 10px;
+}
+.logo img {
+  max-width: 100%;
+}
+
+
+/* Style the logo */
+.logo {
+  float: left; /* Align the logo to the left */
+  /* margin: 8px; */ /* Adjust the margin for spacing */
+  /* margin-left:23px; */
+  /* position: absolute; */
+  /* width:70px; */
+  /* height: 87px; */
+  /* padding-bottom: 20px; */
+}
+#align {
+/* display: flex; */
+justify-content: center;
+align-items: center;
+}
+
+.topnav a {
+float: right; /* Align the links to the right */
+color: #855928cc;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 20px;
+position: relative; /* Ensure proper positioning of pseudo-element */
+}
+
+.topnav a:hover {
+color: rgb(215, 182, 35);
+}
+
+footer {
+  background: linear-gradient(135deg, rgba(44, 42, 39, 0.8), rgba(201, 228, 230, 0.699));
+  padding: 5px;
+}
+
+.footerContainer {
+  width: 100%;
+  padding: 10px 5px 5px;
+}
+
+
+
+nav.topnav.col-span-full.m-col-start-7.m-col-end-13 ul li {
+display: inline-block;
+}
+.topnav a::before {
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+width: 0;
+height: 2px;
+background-color: orange;
+transition: width 0.3s ease; /* Add smooth transition for width change */
+}
+
+.topnav a:hover::before,
+.topnav a:active::before {
+width: 100%; /* Expand the width on hover and when link is active (clicked) */
+}
+/* Add a color to the active/current link */
+.topnav a.active {
+color: #ff8800cc;
+}
+
+.form-container {
+max-width: 600px;
+/* Set maximum width for the form container */
+margin: auto;
+/* Center the form horizontally */
+margin-top: 50px;
+/* Adjust top margin as needed */
+padding: 50px 50px;
+background-color: rgba(0, 0, 255, 0.308);
+height: 400px;
+border-radius: 23px;
+}
+
+
+.image-container {/* width: 350px; *//* height: 250px; */border-radius: 23px;overflow: hidden;
+/* Ensure the shadow is clipped */box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+/* Initial shadow with 0 opacity */transition: box-shadow 0.9s ease, transform 0.9s ease; /* Smooth transition for the shadow and transform */}
+
+.image-container:hover {
+transform: scale(1.05);
+box-shadow: 0 0 20px rgba(57, 3, 255, 0.459);
+/* Shadow effect on hover */
+}
+
+.my-carousel {
+  position: relative;
+  width: 100%; /* Set the width to 100% */
+  margin: auto;
+  overflow: hidden;
+}
+
+.my-carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.my-carousel-item {
+  flex: 0 0 100%;
+}
+
+.my-carousel-inner {
+  height: 700px;
+}
+.my-carousel-item img {
+  width: 100%;
+}
+
+.my-prev,
+.my-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  background-color: rgba(0, 0, 0, 0); /* Background color */
+  color: white; /* Text color */
+  border: 1px solid rgba(0, 0, 0, 0); /* Transparent border */
+  width: 200px; /* Increase the width of the button */
+  height: 400px; /* Increase the height of the button */
+  text-align: center;
+  line-height: 60px; /* Match the height of the button */
+  text-decoration: none;
+  font-size: 20px; /* Size of the icon */
+  outline: none; /* Remove the outline */
+  border: none; /* Remove the border */
+}
+.my-prev:focus,
+.my-next:focus {
+  outline: none; /* Remove the outline on focus */
+}
+
+.my-prev {
+  left: 0;
+
+}
+
+.my-next {
+  right: 0;
+
+}
+
+
+.grid-con.col-span-full.storybox {
+    border-bottom: 1px solid #efe4e4;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.grid-con.col-span-full.storybox p {
+    font-size: 16px;
+    line-height: 23px;
+}
+
+.footerNav.col-span-full ul li {
+    display: inline-block;
+}
+
+footer.grid-con.col-span-full {
+    text-align: center;
+}
+
+
+.yoyo{
+  padding: 50px 0;
+  text-align: center;
+}
+
+.yoyo h2{
+  padding-bottom: 30px;
+  font-size: 35px;
+}
+
+.yoyo p{
+  font-size: 25px;
+  line-height: 35px;
+}
+
+/* Custom CSS for responsiveness */
+/* Custom CSS for responsiveness */
+@media (max-width: 768px) {
+.container {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+h1 {
+    margin-left: 20px;
+}
+}
+
+.container {display: grid;grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));grid-gap: 50px;justify-content: center;margin-top: 30px;}
+
+.product-box {
+position: relative; /* Position product description relative to the box */
+border-radius: 23px;
+overflow: hidden; /* Hide overflowing content */
+transition: transform 0.2s ease-in-out; /* Smooth transition on hover */
+height: 350px;
+background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background color */
+border: 1px solid #ddd;
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+.product-image {
+width: 100%;
+height: auto;
+border-radius: 23px;
+}
+
+.product-description {
+position: absolute; /* Position description absolutely */
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+color: white;
+padding: 20px;
+box-sizing: border-box;
+opacity: 0; /* Initially hidden */
+transition: opacity 0.3s ease; /* Smooth transition on hover */
+}
+
+.product-box:hover .product-description {
+opacity: 1; /* Show description on hover */
+}
+
+.product-title {
+font-size: 20px;
+margin-bottom: 10px;
+}
+
+.product-description {
+font-size: 14px;
+margin-top: 10px;
+}
+
+
+
+.story.grid-con.col-span-full {
+  /* border: 1px solid red; */
+  margin-top: 29px;
+  /* padding: 10px; */
+}
+
+
+.story-inner h2 {
+  font-size: 33px;
+  margin-bottom: 20px;
+}
+
+
+
+.story img {
+  max-width: 100%;
+}
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+.center1 {
+    width: 80%;
+    height: auto;
+
+}
+}
+
+@media only screen and (max-width: 480px) {
+.center1 {
+    width: 80%;
+    height: auto;
+}
+}
+
+/* Apply transition to form elements */
+.form-container {
+transition: transform 0.3s ease-in-out;
+}
+
+/* Scale up the form container when hovered over */
+.form-container:hover {
+transform: scale(1.05);
+}
+
+.form-group {
+transition: transform 0.3s ease-in-out;
+}
+
+/* Scale up the form group when hovered over or focused on */
+.form-group:hover,
+.form-group:focus {
+transform: scale(1.05);
+}
+
+/* Apply transition to the submit button */
+.btn-primary {
+transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Darken the background color of the submit button when hovered over or focused on */
+.btn-primary:hover,
+.btn-primary:focus {
+background-color: #0056b3;
+/* Darker blue color */
+}
+
+/* Scale up the submit button when hovered over or focused on */
+.btn-primary:hover,
+.btn-primary:focus {
+transform: scale(1.05);
+}
+
+
+
+
+
+/* Adjusting layout for smaller screens */
+@media only screen and (max-width: 1161px) {
+  .story {
+    margin: 30px; /* Reduce margin for smaller screens */
+    justify-content: center;
+  }
+  .story > div {
+    display: flex;
+    flex-direction: column; /* Stack the image and text vertically */
+    align-items: center; /* Center the elements horizontally */
+    text-align: center; /* Center the text horizontally */
+  }
+  .story > div > div {
+    margin: 10px 0; /* Add margin between image and text */
+  }
+  .story > div > div:last-child {
+    margin-left: 0; /* Remove margin from the last text block */
+  }
+}
+
+
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+footer{
+background: linear-gradient(135deg, rgba(44, 42, 39, 0.8), rgba(201, 228, 230, 0.699));
+
+padding: 5px;
+}
+.footerContainer{
+width: 100%;
+padding: 10px 5px 5px ;
+}
+.socialIcons{display: inline-block;/* display: flex; *//* justify-content: center; *//* border: 1px solid red; */margin-bottom: 10px;}
+.socialIcons a{text-decoration: none;padding: 9px 10px;background-color: rgba(255,255,255,0.8);/* margin: 15px; */border-radius: 20%;line-height: 26px;}
+.socialIcons a i{font-size: 21px;color: rgb(6, 112, 94);opacity: 0.9;line-height: 26px;}
+/* Hover affect on social media icon */
+.socialIcons a:hover{
+background-color: rgba(114, 167, 144, 0.9);
+transition: 0.5s;
+}
+.socialIcons a:hover i{
+color: white;
+transition: 0.5s;
+}
+.footerNav{
+margin: 2px 0;
+}
+.footerNav ul{/* display: flex; *//* justify-content: center; */list-style-type: none;}
+.footerNav ul li a{
+color:white;
+margin: 15px;
+text-decoration: none;
+font-size: 1.1em;
+opacity: 0.7;
+transition: 0.5s;
+}
+.footerNav ul li a:hover{
+opacity: 1;
+}
+.footerBottom{
+
+padding: 2px;
+text-align: center;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 20px;
+}
+.footerBottom p{
+color: white;
+font-size: 0.9em;
+}
+.designer{
+opacity: 0.7;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-weight: 400;
+margin: 0px 5px;
+}
+
+
+@media (max-width: 700px){
+.footerNav ul{
+    flex-direction: column;
+} 
+.footerNav ul li{
+    width:100%;
+    text-align: center;
+    margin: 10px;
+}
+.socialIcons a{
+    padding: 6px;
+    margin: 3px;
+}
+}
+
+
+
+
+@media only screen and (max-width: 1075px) {
+.contact {
+    height: auto; /* Set height to auto on smaller screens */
+
+}
+}

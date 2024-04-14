@@ -1,0 +1,44 @@
+/* Basic Reset */
+* {
+  margin: 30;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styling for the navigation */
+nav.topnav {
+  background-color: #858383; /* Change the background color */
+  overflow: hidden;
+}
+
+nav.topnav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav.topnav li {
+  display: inline-block;
+}
+
+nav.topnav a {
+  display: block;
+  padding: 14px 20px;
+  text-decoration: none;
+  color: #fff; /* Change the text color */
+}
+
+nav.topnav a:hover {
+  background-color: #ddd; /* Change the background color on hover */
+  color: #333; /* Change the text color on hover */
+}
+
+.main-header {
+  display: grid;
+}
+
+.logo-container {
+  grid-column: 1 / -1; /* This spans the entire grid */
+  justify-self: center; /* This centers the container horizontally */
+}
